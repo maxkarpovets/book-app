@@ -20,7 +20,6 @@ export class BookListComponent implements OnInit {
       (data) => {
         console.log(data);
         this.localstorage.setItems('books', data);
-        // this.books = data.results;
     },
     err => console.log('Error with books getting'),
     () => this.getBooksList()

@@ -9,7 +9,8 @@ import { BooksService } from '../services/books.service';
 })
 export class BookInfoComponent implements OnInit {
   book: any;
-
+  editedBook: any;
+  allowEdit: boolean = false;
   constructor(private booksService: BooksService, private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -20,6 +21,24 @@ export class BookInfoComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.booksService.getBook(id)
       .subscribe(book => this.book = book);
+
+    this.editedBook = Object.assign({}, this.book);
+  }
+
+  editBook() {
+    this.allowEdit = true;
+  }
+
+  blockEdit() {
+    this.allowEdit = false;
+  }
+
+  save() {
+    this.booksService.updateBook(this.editedBook);
+  }
+
+  cancel() {
+    this.editedBook = this.book;
   }
 
 }

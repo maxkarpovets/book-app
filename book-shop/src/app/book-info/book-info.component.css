@@ -1,0 +1,13 @@
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+mat-form-field{
+    display: table;
+    
+}
+
+mat-input-element {
+    background-color: lightgray;
+}

@@ -1,27 +1,27 @@
 [{
   "id": 1,
-  "name": "Book 1",
+  "name": "A book",
   "author": "Author 1",
   "pages": 100,
   "publication": 1900
 },
 {
   "id": 2,
-  "name": "Book 1",
-  "author": "Author 2",
+  "name": "Z Book 1",
+  "author": "B Author 2",
   "pages": 276,
   "publication": 1910
 },
 {
   "id": 3,
-  "name": "Book 3",
-  "author": "Author 3",
+  "name": "F Book",
+  "author": "Z Author 3",
   "pages": 257,
   "publication": 1920
 },
 {
   "id": 4,
-  "name": "Book 4",
+  "name": "D book",
   "author": "Author 4",
   "pages": 298,
   "publication": 1930

@@ -1,7 +1,7 @@
 <button mat-button (click)="getBooksFromJson()">Get data from json file</button>
 
 <div *ngIf="books && books.length > 0 ">
-  <mat-card *ngFor="let book of books">
+  <mat-card *ngFor="let book of books | orderby: 'name'">
       <a routerLink="/books/{{book.id}}">{{book.name}}</a>
       <div>{{book.author}}</div>
       <div>{{book.pages}}</div>

@@ -1,7 +1,18 @@
 
 <mat-card>
   <h2>{{book.name}}</h2>
-  <div>Author: {{book.author}}</div>
-  <div>Pages: {{book.pages}}</div>
-  <div>Publication year: {{book.publication}}</div>  
+  <mat-form-field>
+    <div>Author: <input matInput [(ngModel)]="editedBook.author" [readonly]="!allowEdit"></div>
+  </mat-form-field>
+  <mat-form-field>
+    <div>Pages: <input matInput [(ngModel)]="editedBook.pages" [readonly]="!allowEdit"></div>
+  </mat-form-field>  
+  <mat-form-field>
+    <div>Publication year: <input matInput [(ngModel)]="editedBook.publication" [readonly]="!allowEdit"></div>
+  </mat-form-field>
+    
+  <button mat-button (click)="editBook()">Edit</button>
+  <button mat-button (click)="blockEdit()">Block edit</button>
+  <button mat-button (click)="save()">Save</button>
+  <button mat-button (click)="cancel()">Cancel</button>
 </mat-card>
