@@ -1,3 +1,13 @@
-<p>
-  book-list works!
-</p>
+<button mat-button (click)="getBooksFromJson()">Get data from json file</button>
+
+<div *ngIf="books && books.length > 0 ">
+  <mat-card *ngFor="let book of books">
+      <a routerLink="/books/{{book.id}}">{{book.name}}</a>
+      <div>{{book.author}}</div>
+      <div>{{book.pages}}</div>
+      <div>{{book.publication}}</div>  
+
+  </mat-card>
+</div>
+
+

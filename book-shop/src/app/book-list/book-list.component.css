@@ -1,0 +1,13 @@
+mat-card {
+    width: 200px;
+    height: 200px;
+    display: inline-grid;
+    margin: 10px;
+    background-color: #fff;
+}
+
+.mat-button {
+    background-color: #d3d3d3;
+    display: block;
+    margin-top: 10px;
+ }
