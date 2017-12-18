@@ -4,8 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'orderby'
 })
 export class OrderPipe implements PipeTransform {
-
- 
   transform(value: any | any[], expression?: any, reverse?: boolean): any {
     if (!value) {
       return value;

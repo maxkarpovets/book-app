@@ -7,6 +7,7 @@ import { BooksService } from '../services/books.service';
   templateUrl: './book-info.component.html',
   styleUrls: ['./book-info.component.css']
 })
+
 export class BookInfoComponent implements OnInit {
   book: any;
   editedBook: any;
@@ -17,7 +18,10 @@ export class BookInfoComponent implements OnInit {
     this.getBookInfo();
   }
 
-  getBookInfo(): void {
+  /*
+   * Get all data about needed book.
+   */
+  getBookInfo() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.booksService.getBook(id)
       .subscribe(book => this.book = book);

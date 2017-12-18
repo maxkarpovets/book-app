@@ -11,3 +11,9 @@ mat-card {
     display: block;
     margin-top: 10px;
  }
+
+ a {
+     font-size: 18px;
+     font-weight: 800;
+     color: black;
+ }

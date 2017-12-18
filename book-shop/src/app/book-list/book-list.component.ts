@@ -11,14 +11,15 @@ export class BookListComponent implements OnInit {
   books: any;
   constructor(private booksService: BooksService, private localstorage: LocalstorageService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  /*
+   * Get books data from fake Json fake.
+   */
   getBooksFromJson() {
     this.booksService.getBooksFromJson()
     .subscribe(
       (data) => {
-        console.log(data);
         this.localstorage.setItems('books', data);
     },
     err => console.log('Error with books getting'),
@@ -26,9 +27,13 @@ export class BookListComponent implements OnInit {
     );
   }
 
+  /*
+   * Get books list from localstorage.
+   * Spike implementation, should be replaced for 
+   * real projects.
+   */
   getBooksList() {
     this.books = this.localstorage.getItems('books');
-    console.log(this.books);
   }
 
 }

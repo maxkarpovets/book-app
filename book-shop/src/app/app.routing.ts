@@ -8,7 +8,7 @@ import { BookInfoComponent } from './book-info/book-info.component';
 const appRoutes: Routes = [
     {path: '', component: AppComponent},
     {path: 'books', component: BookListComponent},
-    {path: 'books/:id', component: BookInfoComponent },
+    {path: 'books/:id', component: BookInfoComponent},
     {path: '**', redirectTo: ''},
 ];
 

@@ -11,3 +11,7 @@ mat-form-field{
 mat-input-element {
     background-color: lightgray;
 }
+
+mat-card {
+    margin-top: 12px;
+}

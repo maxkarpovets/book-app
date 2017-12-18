@@ -12,10 +12,11 @@ import { BooksService } from './services/books.service';
 import { LocalstorageService } from './services/localstorage.service';
 import { CommunicationService } from './services/communication.service';
 import { appRoutingProviders, routing } from './app.routing';
-import { MatButtonModule, MatCardModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatTooltipModule } from '@angular/material';
 import { BookInfoComponent } from './book-info/book-info.component';
 import { OrderPipe } from './pipes/orderby.pipe';
 
+import {Ng2PaginationModule} from 'ng2-pagination';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,12 @@ import { OrderPipe } from './pipes/orderby.pipe';
     routing,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    Ng2PaginationModule,
+    MatTooltipModule
   ],
-  providers: [BooksService, LocalstorageService, appRoutingProviders, CommunicationService],
+  providers:  [ BooksService, LocalstorageService,
+                appRoutingProviders, CommunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

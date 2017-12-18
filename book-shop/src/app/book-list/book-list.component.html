@@ -1,13 +1,18 @@
 <button mat-button (click)="getBooksFromJson()">Get data from json file</button>
 
 <div *ngIf="books && books.length > 0 ">
-  <mat-card *ngFor="let book of books | orderby: 'name'">
-      <a routerLink="/books/{{book.id}}">{{book.name}}</a>
+  <mat-card *ngFor="let book of books | orderby: 'name' | paginate: {itemsPerPage: 5, currentPage:page, id: '1'}; let i = index">
+      <a routerLink="/books/{{book.id}}" matTooltip="Please, click here to open book">{{book.name}}</a>
       <div>{{book.author}}</div>
       <div>{{book.pages}}</div>
       <div>{{book.publication}}</div>  
-
   </mat-card>
+
+  <pagination-controls (pageChange)="page = $event" id="1"
+    maxSize="5"
+    directionLinks="true"
+    autoHide="true">
+  </pagination-controls>`
 </div>
 
 
